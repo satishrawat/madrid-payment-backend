@@ -6,7 +6,7 @@
     <groupId>com.madridpayment</groupId>
     <artifactId>madrid-payment-backend</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging> <!-- Change to WAR -->
 
     <name>Madrid Payment Backend</name>
     <description>Backend for Madrid Payment Application</description>
@@ -58,6 +58,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.7.15</version>
+                <configuration>
+                    <packaging>war</packaging> <!-- Ensure WAR packaging -->
+                </configuration>
             </plugin>
         </plugins>
     </build>
