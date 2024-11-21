@@ -14,12 +14,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.15</version> <!-- Use a stable version of Spring Boot -->
+        <version>2.7.15</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
-        <java.version>11</java.version> <!-- Ensure it matches your Java version -->
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -43,11 +43,17 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
+
+        <!-- Jakarta Persistence API -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
