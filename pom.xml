@@ -8,9 +8,6 @@
     <version>1.0</version>
     <packaging>war</packaging>
     
-    <name>Madrid Payment Backend</name>
-    <description>Backend application for managing payments</description>
-
     <properties>
         <java.version>11</java.version>
         <spring.boot.version>2.7.6</spring.boot.version>
@@ -38,20 +35,17 @@
             <version>8.0.33</version>
         </dependency>
 
-        <!-- Spring Boot DevTools (Optional) -->
+        <!-- Javax Persistence API -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <version>${spring.boot.version}</version>
-            <scope>runtime</scope>
-            <optional>true</optional>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
         </dependency>
     </dependencies>
 
     <build>
         <finalName>madrid-payment-backend</finalName>
         <plugins>
-            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -62,14 +56,12 @@
                 </configuration>
             </plugin>
 
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
             </plugin>
 
-            <!-- Maven WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
